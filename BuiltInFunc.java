@@ -1,22 +1,29 @@
+import java.lang.Math;
+
 class BuiltInFunc {
 
-	private static final int Arr[] = { 8, 1, 7, 2, 6, 3, 5, 4, 9, 0 };
-	
+	private static final int ArrSize = 10;
+		
 	public static void main(String[] args) {
 		
-		for(int i = 0; i < Arr.length; ++i) {
-			for(int j = i+1; j < Arr.length; ++j) {
-				if(Arr[i] > Arr[j]) {
-					int temp = Arr[i];
-					Arr[i] = Arr[j];
-					Arr[j] = temp;
+		int[] arr = new int[ArrSize];
+		for(int i = 0; i < ArrSize; ++i) {
+			arr[i] = (int)(Math.random() * 1000);
+		}
+		
+		for(int i = 0; i < arr.length; ++i) {
+			for(int j = i+1; j < arr.length; ++j) {
+				if(arr[i] > arr[j]) {
+					int temp = arr[i];
+					arr[i] = arr[j];
+					arr[j] = temp;
 				} else {
 					// do nothing
 				}
 			}
 		}
 		
-		for(int i : Arr) {
+		for(int i : arr) {
 			System.out.println(i);
 		}
 	}
