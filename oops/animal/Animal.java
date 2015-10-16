@@ -4,12 +4,13 @@ public class Animal {
 
 	private String name = "not set";
 	private String voice = "not set";
-	private int legs = 0;
+
 	private int hands = 0;
-	private int running_speed_mph = 0;
+	private int legs = 0;
+	private int speed_mph = 0;
 
 	public String getName() {
-		return name;
+		return this.name;
 	}
 
 	public void setName(String name) {
@@ -17,41 +18,42 @@ public class Animal {
 	}
 
 	public String getVoice() {
-		return voice;
+		return this.voice;
 	}
 
 	public void setVoice(String voice) {
 		this.voice = voice;
 	}
 
-	public int getLegs() {
-		return legs;
+	protected int getHands() {
+		return this.hands;
 	}
 
-	public void setLegs(int legs) {
-		this.legs = legs;
-	}
-
-	public int getHands() {
-		return hands;
-	}
-
-	public void setHands(int hands) {
+	protected void setHands(int hands) {
 		this.hands = hands;
 	}
 
-	public int getRunningSpeedMph() {
-		return running_speed_mph;
+	protected int getLegs() {
+		return this.legs;
 	}
 
-	public void setRunningSpeedMph(int running_speed_mph) {
-		this.running_speed_mph = running_speed_mph;
+	protected void setLegs(int legs) {
+		this.legs = legs;
+	}
+
+	public int getSpeedMph() {
+		return this.speed_mph;
+	}
+
+	public void setSpeedMph(int speed_mph) {
+		this.speed_mph = speed_mph;
 	}
 
 	public String talk() {
-		String ret = "I'm " + this.getName() + " " + this.getClass().getName() + "!";
-		ret += " My voice is " + this.getVoice();
-		ret += " and I run as fast as " + this.getRunningSpeedMph() + " Mph";
+		String ret = "I'm " + this.getName() + " of type " + this.getClass().getName();
+		ret += "! My voice is " + this.getVoice();
+		ret += " and my speed is " + this.getSpeedMph();
+		ret += " Mph. I've " + this.getLegs() + " legs and " + this.getHands() + " hands.";
 		return ret;
 	}
 
@@ -60,9 +62,7 @@ public class Animal {
 		String ret = "{\n";
 		ret += "\t\"Name\": \"" + this.getName() + "\"";
 		ret += ",\n\t\"Voice\": \"" + this.getVoice() + "\"";
-		ret += ",\n\t\"Legs\": \"" + this.getLegs() + "\"";
-		ret += ",\n\t\"Hands\": \"" + this.getHands() + "\"";
-		ret += ",\n\t\"RunningSpeedMph\": \"" + this.getRunningSpeedMph() + "\"";
+		ret += ",\n\t\"SpeedMph\": \"" + this.getSpeedMph() + "\"";
 		ret += "\n}";
 		return ret;
 	}
