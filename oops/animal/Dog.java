@@ -28,4 +28,9 @@ public class Dog extends Animal {
 		return ret;
 	}
 
+	@Override
+	public void draw() {
+		System.out.println("Dog");
+	}
+
 }

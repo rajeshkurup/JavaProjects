@@ -25,4 +25,9 @@ public class Dolphin extends Animal {
 		return ret;
 	}
 
+	@Override
+	public void draw() {
+		System.out.println("Dolphin");
+	}
+
 }

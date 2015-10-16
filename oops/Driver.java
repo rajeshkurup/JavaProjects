@@ -44,6 +44,7 @@ class Driver {
 		for(Animal animal : animals) {
 			System.out.println(animal);
 			System.out.println(animal.talk());
+			animal.draw();
 		}
 	}
 

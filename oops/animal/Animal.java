@@ -2,7 +2,7 @@ package animal;
 
 import generic.Types;
 
-public class Animal {
+public abstract class Animal {
 
 	private String name = "not set";
 	private String voice = "not set";
@@ -78,6 +78,8 @@ public class Animal {
 		ret += " and my speed is " + this.getSpeedMph() + " Mph.";
 		return ret;
 	}
+
+	public abstract void draw();
 
 	@Override
 	public String toString() {

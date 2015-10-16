@@ -28,4 +28,9 @@ public class Cat extends Animal {
 		return ret;
 	}
 
+	@Override
+	public void draw() {
+		System.out.println("Cat");
+	}
+
 }
