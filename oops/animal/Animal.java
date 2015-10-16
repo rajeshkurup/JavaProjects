@@ -2,8 +2,8 @@ package animal;
 
 public class Animal {
 
-	private String name = "";
-	private String voice = "";
+	private String name = "not set";
+	private String voice = "not set";
 	private int legs = 0;
 	private int hands = 0;
 	private int running_speed_mph = 0;
@@ -49,7 +49,10 @@ public class Animal {
 	}
 
 	public String talk() {
-		return "Not Implemented";
+		String ret = "I'm " + this.getName() + " " + this.getClass().getName() + "!";
+		ret += " My voice is " + this.getVoice();
+		ret += " and I run as fast as " + this.getRunningSpeedMph() + " Mph";
+		return ret;
 	}
 
 	@Override
