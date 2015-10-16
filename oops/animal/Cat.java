@@ -33,7 +33,7 @@ public class Cat extends Animal {
 
 	@Override
 	public void draw() {
-		System.out.println("Cat");
+		System.out.println("Draw Cat");
 	}
 
 }

@@ -30,7 +30,7 @@ public class Dolphin extends Animal {
 
 	@Override
 	public void draw() {
-		System.out.println("Dolphin");
+		System.out.println("Draw Dolphin");
 	}
 
 }

@@ -33,7 +33,7 @@ public class SeaLion extends Animal {
 
 	@Override
 	public void draw() {
-		System.out.println("SeaLion");
+		System.out.println("Draw SeaLion");
 	}
 
 }

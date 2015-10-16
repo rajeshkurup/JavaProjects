@@ -35,7 +35,7 @@ public class Kangaroo extends Animal {
 
 	@Override
 	public void draw() {
-		System.out.println("Kangaroo");
+		System.out.println("Draw Kangaroo");
 	}
 
 }
