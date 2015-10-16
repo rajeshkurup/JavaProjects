@@ -10,7 +10,7 @@ public abstract class Animal implements Display {
 
 	private int hands = 0;
 	private int legs = 0;
-	private int speed_mph = 0;
+	private int speedMph = 0;
 
 	private Types.Gender gender = Types.Gender.Others;
 
@@ -49,11 +49,11 @@ public abstract class Animal implements Display {
 	}
 
 	public int getSpeedMph() {
-		return this.speed_mph;
+		return this.speedMph;
 	}
 
-	public void setSpeedMph(int speed_mph) {
-		this.speed_mph = speed_mph;
+	public void setSpeedMph(int speedMph) {
+		this.speedMph = speedMph;
 	}
 
 	public Types.Gender getGender() {
