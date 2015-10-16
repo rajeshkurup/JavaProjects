@@ -1,8 +1,9 @@
 package animal;
 
+import generic.Display;
 import generic.Types;
 
-public abstract class Animal {
+public abstract class Animal implements Display {
 
 	private String name = "not set";
 	private String voice = "not set";
@@ -71,15 +72,7 @@ public abstract class Animal {
 		this.tail = tail;
 	}
 
-	public String talk() {
-		String ret = "I'm " + this.getName() + " of type " + this.getClass().getName();
-		ret += "! I'm a " + this.getGender();
-		ret += ". My voice is " + this.getVoice();
-		ret += " and my speed is " + this.getSpeedMph() + " Mph.";
-		return ret;
-	}
-
-	public abstract void draw();
+	public abstract String talk();
 
 	@Override
 	public String toString() {

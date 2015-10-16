@@ -20,7 +20,10 @@ public class Dolphin extends Animal {
 
 	@Override
 	public String talk() {
-		String ret = super.talk();
+		String ret = "I'm " + this.getName() + " of type " + this.getClass().getName();
+		ret += "! I'm a " + this.getGender();
+		ret += ". My voice is " + this.getVoice();
+		ret += " and my speed is " + this.getSpeedMph() + " Mph.";
 		ret += (this.getTail() ? " I've tail." : " I don't have tail.");
 		return ret;
 	}
