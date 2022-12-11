@@ -17,4 +17,6 @@ public class PrintHistogram {
     
      // Each "=" represents 1 point
      // If decimal point value is greater than or equal to 5 add "=" otherwise ignore
+
+     // Print summary like average, mode and total entries
 }

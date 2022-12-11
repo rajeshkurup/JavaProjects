@@ -11,4 +11,8 @@ public class SampleDatabase {
     // First line of the database would always be the number of records in the database
     // Each record would have 5 fields like First Name, Last Name, Age, Position
     // Fields in Records are separated by a space character
+
+    // Read input from Console
+    // Ask questions on Console
+    // Print database content on Console
 }
