@@ -37,11 +37,12 @@ public class ShortestDistance {
     private int findDist(int[][] map2d, boolean[][] arrVis, Cell src, Cell dest) {
         Queue<Cell> queue = new LinkedList<>();
         queue.add(new Cell(src.row, src.col, 0));
-        arrVis[src.row][src.col] = true;
 
         int dist = 0;
         while(!queue.isEmpty()) {
             Cell currCell = queue.poll();
+            arrVis[currCell.row][currCell.col] = true;
+
             if(currCell.row == dest.row && currCell.col == dest.col) {
                 dist = currCell.dist;
                 break;
@@ -50,7 +51,6 @@ public class ShortestDistance {
                     Cell newCell = new Cell(currCell.row + DROW[i], currCell.col + DCOL[i], currCell.dist + 1);
                     if(isValid(arrVis, newCell)) {
                         queue.add(newCell);
-                        arrVis[newCell.row][newCell.col] = true;
                     }
                 }
             }
